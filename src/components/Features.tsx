@@ -35,25 +35,27 @@ const features = [
 
 const Features = () => {
   return (
-    <section id="features" className="w-full py-20 lg:py-32 bg-secondary">
+    <section id="features" className="w-full py-32 bg-secondary">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="section-title mb-6">Transform Your Legal Workflow</h2>
-          <p className="body-large max-w-2xl mx-auto">
+        <div className="text-center mb-20">
+          <h2 className="section-title mb-8">Transform Your Legal Workflow</h2>
+          <p className="body-large max-w-3xl mx-auto">
             Streamline your document analysis process with AI-powered tools designed specifically for legal professionals.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
-              <div key={index} className="feature-card">
-                <div className="mb-6">
-                  <Icon className="w-8 h-8 text-primary" strokeWidth={1.5} />
+              <div key={index} className={`feature-card fade-in-up stagger-${(index % 6) + 1}`}>
+                <div className="mb-8">
+                  <div className="w-16 h-16 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                    <Icon className="w-8 h-8 text-accent" strokeWidth={1.5} />
+                  </div>
                 </div>
-                <h3 className="feature-title mb-4">{feature.title}</h3>
-                <p className="body-medium text-muted-foreground">{feature.description}</p>
+                <h3 className="feature-title mb-6">{feature.title}</h3>
+                <p className="body-medium text-muted-foreground leading-relaxed">{feature.description}</p>
               </div>
             );
           })}

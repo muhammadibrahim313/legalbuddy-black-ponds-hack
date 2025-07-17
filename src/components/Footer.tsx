@@ -1,14 +1,28 @@
+import { Award, Shield, Mail, Phone, MapPin } from "lucide-react";
+
 const Footer = () => {
   return (
-    <footer className="w-full border-t border-border bg-secondary py-16">
+    <footer className="w-full py-20 bg-foreground text-background">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-4 gap-12">
           {/* Company Info */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold">LegalBuddy</h3>
-            <p className="text-sm text-muted-foreground">
-              AI-powered legal document analysis for modern law practices.
+          <div className="md:col-span-2">
+            <h3 className="text-3xl font-black mb-6">LegalBuddy</h3>
+            <p className="body-medium text-background/80 mb-8 max-w-md leading-relaxed">
+              AI-powered legal document analysis platform trusted by legal professionals worldwide. 
+              Transforming the future of legal document review.
             </p>
+            
+            <div className="space-y-4 mb-8">
+              <div className="flex items-center space-x-3">
+                <Mail className="w-5 h-5 text-background/60" />
+                <span className="text-background/80">hello@legalbuddy.ai</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Phone className="w-5 h-5 text-background/60" />
+                <span className="text-background/80">+1 (555) 123-4567</span>
+              </div>
+            </div>
           </div>
 
           {/* Product Links */}

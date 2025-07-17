@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Pure black and white design system */
+    /* Premium black and white design system with sophisticated accents */
     --background: 0 0% 100%;
     --foreground: 0 0% 0%;
 
@@ -21,21 +21,24 @@ All colors MUST be HSL.
     --primary: 0 0% 0%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 100%;
+    --secondary: 0 0% 98%;
     --secondary-foreground: 0 0% 0%;
 
-    --muted: 0 0% 100%;
-    --muted-foreground: 0 0% 0%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 0 0% 100%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 210 100% 20%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 0% 0%;
+    --gold: 43 74% 49%;
+    --gold-foreground: 0 0% 0%;
+
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 0%;
+    --border: 0 0% 90%;
     --input: 0 0% 100%;
-    --ring: 0 0% 0%;
+    --ring: 210 100% 20%;
 
     --radius: 0.5rem;
 
@@ -57,34 +60,37 @@ All colors MUST be HSL.
   }
 
   .dark {
-    /* Keep same black and white theme for dark mode */
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    /* Premium dark mode with sophisticated accents */
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 0%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 0%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 0 0% 100%;
-    --primary-foreground: 0 0% 0%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 3%;
 
-    --secondary: 0 0% 0%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 0 0% 8%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 0%;
-    --muted-foreground: 0 0% 100%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 0 0% 0%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 210 100% 70%;
+    --accent-foreground: 0 0% 3%;
 
-    --destructive: 0 0% 100%;
-    --destructive-foreground: 0 0% 0%;
+    --gold: 43 74% 60%;
+    --gold-foreground: 0 0% 3%;
 
-    --border: 0 0% 100%;
-    --input: 0 0% 0%;
-    --ring: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 8%;
+    --ring: 210 100% 70%;
   }
 }
 
@@ -97,43 +103,129 @@ All colors MUST be HSL.
     @apply bg-background text-foreground font-sans;
   }
 
-  /* Custom typography styles */
+  /* Premium typography styles */
   .hero-headline {
-    @apply text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-none;
+    @apply text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-none;
+    background: linear-gradient(135deg, hsl(var(--foreground)), hsl(var(--accent)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight;
   }
 
   .feature-title {
-    @apply text-xl md:text-2xl font-semibold;
+    @apply text-xl md:text-2xl font-bold;
   }
 
   .body-large {
-    @apply text-lg md:text-xl leading-relaxed;
+    @apply text-xl md:text-2xl leading-relaxed font-medium;
   }
 
   .body-medium {
-    @apply text-base md:text-lg leading-relaxed;
+    @apply text-lg md:text-xl leading-relaxed;
   }
 
-  /* Button variants */
+  .stat-number {
+    @apply text-5xl md:text-6xl lg:text-7xl font-black tracking-tight;
+  }
+
+  .premium-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+  }
+
+  .gold-gradient {
+    background: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--accent)));
+  }
+
+  /* Premium button variants */
   .btn-primary {
-    @apply bg-primary text-primary-foreground px-8 py-4 rounded-none font-semibold transition-all duration-200 hover:scale-[1.02] border border-primary;
+    @apply bg-primary text-primary-foreground px-10 py-5 rounded-sm font-bold text-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl border border-primary;
   }
 
   .btn-secondary {
-    @apply bg-secondary text-secondary-foreground px-8 py-4 rounded-none font-semibold transition-all duration-200 hover:scale-[1.02] border border-primary;
+    @apply bg-secondary text-secondary-foreground px-10 py-5 rounded-sm font-bold text-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl border border-primary;
   }
 
-  /* Card styles */
+  .btn-accent {
+    @apply px-10 py-5 rounded-sm font-bold text-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl text-white border border-accent;
+    background: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--primary)));
+  }
+
+  .btn-gold {
+    @apply px-10 py-5 rounded-sm font-bold text-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl text-black border border-gold;
+    background: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--accent)));
+  }
+
+  /* Premium card styles */
   .feature-card {
-    @apply bg-card p-8 border border-border transition-all duration-300 hover:border-primary hover:scale-[1.02];
+    @apply bg-card p-10 border border-border transition-all duration-500 hover:border-accent hover:scale-[1.02] hover:shadow-2xl rounded-lg;
+    background: linear-gradient(145deg, hsl(var(--card)), hsl(var(--secondary)));
   }
 
-  /* Smooth scrolling */
+  .premium-card {
+    @apply bg-card p-12 border border-border transition-all duration-500 hover:shadow-2xl rounded-xl;
+    background: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)/0.3));
+    box-shadow: 0 20px 40px -10px hsl(var(--foreground)/0.1);
+  }
+
+  .testimonial-card {
+    @apply bg-card p-8 border border-border transition-all duration-300 hover:shadow-xl rounded-lg;
+    background: linear-gradient(145deg, hsl(var(--card)), hsl(var(--secondary)));
+  }
+
+  /* Premium animations and effects */
   html {
     scroll-behavior: smooth;
+  }
+
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+  .stagger-6 { animation-delay: 0.6s; }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .floating-nav {
+    backdrop-filter: blur(10px);
+    background: hsl(var(--background)/0.9);
+  }
+
+  /* Scrolling animation for trusted logos */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
   }
 }
