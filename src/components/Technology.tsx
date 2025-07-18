@@ -1,15 +1,6 @@
-const technologies = [
-  "LlamaParse",
-  "RAG",
-  "OpenAI",
-  "Vector DB",
-  "Python",
-  "React"
-];
-
+const technologies = ["LlamaParse", "RAG", "OpenAI", "Vector DB", "Python", "React"];
 const Technology = () => {
-  return (
-    <section className="w-full py-32 bg-secondary">
+  return <section className="w-full py-32 bg-secondary">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center space-y-12">
           <div>
@@ -23,14 +14,9 @@ const Technology = () => {
 
           {/* Technology Stack */}
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6 pt-12">
-            {technologies.map((tech, index) => (
-              <div 
-                key={index} 
-                className={`premium-card text-center py-8 fade-in-up stagger-${(index % 7) + 1}`}
-              >
-                <div className="text-xl font-bold">{tech}</div>
-              </div>
-            ))}
+            {technologies.map((tech, index) => <div key={index} className={`premium-card text-center py-8 fade-in-up stagger-${index % 7 + 1}`}>
+                <div className="text-xl font-bold mx-0 px-0 my-0">{tech}</div>
+              </div>)}
           </div>
 
           {/* Performance Metrics */}
@@ -53,8 +39,6 @@ const Technology = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Technology;
