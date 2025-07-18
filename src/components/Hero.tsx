@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/button";
 import platformMockup from "@/assets/platform-mockup.jpg";
-
 const Hero = () => {
-  return (
-    <section className="w-full pt-32 pb-20 lg:pt-40 lg:pb-32 relative overflow-hidden">
+  return <section className="w-full pt-32 pb-20 lg:pt-40 lg:pb-32 relative overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/30 to-background"></div>
       
@@ -15,7 +13,7 @@ const Hero = () => {
               🏆 Legal Innovation Award Winner 2024
             </div>
             
-            <h1 className="hero-headline">
+            <h1 className="hero-headline text-6xl">
               Legal Documents,{" "}
               <span className="italic">REIMAGINED.</span>
             </h1>
@@ -65,11 +63,7 @@ const Hero = () => {
           {/* Right Content - Platform Mockup */}
           <div className="relative fade-in-up stagger-2">
             <div className="relative z-10">
-              <img 
-                src={platformMockup} 
-                alt="LegalBuddy Platform Interface" 
-                className="w-full h-auto rounded-xl shadow-2xl border border-border"
-              />
+              <img src={platformMockup} alt="LegalBuddy Platform Interface" className="w-full h-auto rounded-xl shadow-2xl border border-border" />
             </div>
             {/* Premium background elements */}
             <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-gold/20 transform translate-x-6 translate-y-6 -z-10 rounded-xl"></div>
@@ -78,8 +72,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
