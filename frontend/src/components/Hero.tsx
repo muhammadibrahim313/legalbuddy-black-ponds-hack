@@ -60,143 +60,211 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Content - Interactive Platform Mockup */}
+          {/* Right Content - Premium 3D Interactive Platform */}
           <div className="relative fade-in-up stagger-2">
-            {/* Main Platform Image */}
-            <div className="relative z-10 group cursor-pointer transition-transform duration-500 hover:scale-[1.02]">
-              <img 
-                src={platformMockup} 
-                alt="LegalBuddy Platform Interface" 
-                className="w-full h-auto rounded-xl shadow-2xl border border-border transition-all duration-500 group-hover:shadow-3xl" 
-              />
+            {/* Main Platform Image with 3D Transform */}
+            <div className="relative z-10 group cursor-pointer perspective-1000">
+              <div className="relative transform-3d transition-all duration-700 hover:scale-105 hover:rotateY-5 hover:rotateX-2">
+                <img 
+                  src={platformMockup} 
+                  alt="LegalBuddy Platform Interface" 
+                  className="w-full h-auto rounded-2xl shadow-2xl border border-white/20 transition-all duration-700 group-hover:shadow-4xl backdrop-blur-sm" 
+                />
+                
+                {/* Glassmorphism Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-all duration-700 rounded-2xl backdrop-blur-sm"></div>
+                
+                {/* Premium Glow Effect */}
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 shadow-glow-blue"></div>
+              </div>
               
-              {/* Interactive Overlay Effects */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-accent/10 via-transparent to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
-            </div>
-
-            {/* Floating Legal Use Cases - Infinite Animation */}
-            <div className="absolute -left-8 top-1/4 z-20">
-              <div className="animate-float-slow">
-                <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg p-4 max-w-xs border border-accent/20 hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer group">
+              {/* Floating UI Elements */}
+              <div className="absolute -top-8 -right-8 z-20">
+                <div className="glass-card p-4 rounded-xl animate-float-elegant group-hover:scale-110 transition-all duration-500">
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center group-hover:bg-accent/30 transition-colors duration-300">
-                      <span className="text-lg animate-pulse">📄</span>
+                    <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse-glow"></div>
+                    <span className="text-sm font-medium text-white/90">Live Processing</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="absolute -bottom-6 -left-6 z-20">
+                <div className="glass-card p-4 rounded-xl animate-float-elegant-delayed group-hover:scale-110 transition-all duration-500">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                      <span className="text-white text-xs font-bold">AI</span>
                     </div>
                     <div>
-                      <div className="font-semibold text-sm text-foreground group-hover:text-accent transition-colors duration-300">Contract Analysis</div>
-                      <div className="text-xs text-muted-foreground">AI reviewing clauses...</div>
+                      <div className="text-sm font-semibold text-white/90">99.4% Accuracy</div>
+                      <div className="text-xs text-white/70">Real-time Analysis</div>
                     </div>
                   </div>
-                  <div className="mt-2 bg-accent/10 h-1 rounded-full overflow-hidden">
-                    <div className="bg-accent h-full w-3/4 rounded-full animate-pulse group-hover:animate-ping"></div>
-                  </div>
-                  <div className="mt-1 text-xs text-accent/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Click to explore →</div>
                 </div>
               </div>
             </div>
 
-            <div className="absolute -right-8 top-1/3 z-20">
-              <div className="animate-float-delayed">
-                <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg p-4 max-w-xs border border-primary/20 hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer group">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center group-hover:bg-primary/30 transition-colors duration-300">
-                      <span className="text-lg animate-bounce">⚖️</span>
-                    </div>
-                    <div>
-                      <div className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors duration-300">Case Research</div>
-                      <div className="text-xs text-muted-foreground">Finding precedents...</div>
+            {/* Premium Floating Legal Workflow Cards */}
+            <div className="absolute -left-12 top-1/6 z-30">
+              <div className="animate-float-premium">
+                <div className="premium-glass-card group/card cursor-pointer">
+                  <div className="relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-500/20 opacity-0 group-hover/card:opacity-100 transition-all duration-500"></div>
+                    <div className="relative z-10 p-6">
+                      <div className="flex items-center space-x-4 mb-4">
+                        <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg transform group-hover/card:scale-110 transition-transform duration-300">
+                          <span className="text-xl animate-pulse-slow">📋</span>
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-white/90 group-hover/card:text-cyan-400 transition-colors duration-300">Contract Intelligence</h4>
+                          <p className="text-xs text-white/60">AI-powered clause extraction</p>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex justify-between text-xs">
+                          <span className="text-white/70">Processing</span>
+                          <span className="text-cyan-400 font-medium">87%</span>
+                        </div>
+                        <div className="premium-progress-bar">
+                          <div className="premium-progress-fill w-4/5"></div>
+                        </div>
+                      </div>
+                      <div className="mt-4 opacity-0 group-hover/card:opacity-100 transition-all duration-300 transform translate-y-2 group-hover/card:translate-y-0">
+                        <span className="text-xs text-cyan-400 font-medium">→ Explore Feature</span>
+                      </div>
                     </div>
                   </div>
-                  <div className="mt-2 bg-primary/10 h-1 rounded-full overflow-hidden">
-                    <div className="bg-primary h-full w-2/3 rounded-full animate-pulse group-hover:animate-ping"></div>
-                  </div>
-                  <div className="mt-1 text-xs text-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Click to explore →</div>
                 </div>
               </div>
             </div>
 
-            <div className="absolute -left-4 bottom-1/4 z-20">
-              <div className="animate-float-reverse">
-                <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg p-4 max-w-xs border border-green-500/20 hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer group">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center group-hover:bg-green-500/30 transition-colors duration-300">
-                      <span className="text-lg animate-spin">🔍</span>
-                    </div>
-                    <div>
-                      <div className="font-semibold text-sm text-foreground group-hover:text-green-600 transition-colors duration-300">Due Diligence</div>
-                      <div className="text-xs text-muted-foreground">Scanning documents...</div>
+            <div className="absolute -right-16 top-1/4 z-30">
+              <div className="animate-float-premium-delayed">
+                <div className="premium-glass-card group/card cursor-pointer">
+                  <div className="relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-500/20 opacity-0 group-hover/card:opacity-100 transition-all duration-500"></div>
+                    <div className="relative z-10 p-6">
+                      <div className="flex items-center space-x-4 mb-4">
+                        <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg transform group-hover/card:scale-110 transition-transform duration-300">
+                          <span className="text-xl animate-bounce-elegant">⚖️</span>
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-white/90 group-hover/card:text-pink-400 transition-colors duration-300">Legal Research</h4>
+                          <p className="text-xs text-white/60">Case law & precedent analysis</p>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex justify-between text-xs">
+                          <span className="text-white/70">Analyzing</span>
+                          <span className="text-pink-400 font-medium">92%</span>
+                        </div>
+                        <div className="premium-progress-bar">
+                          <div className="premium-progress-fill w-11/12 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                        </div>
+                      </div>
+                      <div className="mt-4 opacity-0 group-hover/card:opacity-100 transition-all duration-300 transform translate-y-2 group-hover/card:translate-y-0">
+                        <span className="text-xs text-pink-400 font-medium">→ Explore Feature</span>
+                      </div>
                     </div>
                   </div>
-                  <div className="mt-2 bg-green-500/10 h-1 rounded-full overflow-hidden">
-                    <div className="bg-green-500 h-full w-4/5 rounded-full animate-pulse group-hover:animate-ping"></div>
-                  </div>
-                  <div className="mt-1 text-xs text-green-600/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Click to explore →</div>
                 </div>
               </div>
             </div>
 
-            <div className="absolute -right-4 bottom-1/3 z-20">
-              <div className="animate-float-fast">
-                <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg p-4 max-w-xs border border-blue-500/20 hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer group">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center group-hover:bg-blue-500/30 transition-colors duration-300">
-                      <span className="text-lg">📊</span>
-                    </div>
-                    <div>
-                      <div className="font-semibold text-sm text-foreground group-hover:text-blue-600 transition-colors duration-300">Report Generation</div>
-                      <div className="text-xs text-muted-foreground">Compiling insights...</div>
+            <div className="absolute -left-8 bottom-1/4 z-30">
+              <div className="animate-float-premium-reverse">
+                <div className="premium-glass-card group/card cursor-pointer">
+                  <div className="relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-teal-500/20 opacity-0 group-hover/card:opacity-100 transition-all duration-500"></div>
+                    <div className="relative z-10 p-6">
+                      <div className="flex items-center space-x-4 mb-4">
+                        <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center shadow-lg transform group-hover/card:scale-110 transition-transform duration-300">
+                          <span className="text-xl animate-spin-elegant">🔍</span>
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-white/90 group-hover/card:text-emerald-400 transition-colors duration-300">Due Diligence</h4>
+                          <p className="text-xs text-white/60">Document risk assessment</p>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex justify-between text-xs">
+                          <span className="text-white/70">Scanning</span>
+                          <span className="text-emerald-400 font-medium">95%</span>
+                        </div>
+                        <div className="premium-progress-bar">
+                          <div className="premium-progress-fill w-19/20 bg-gradient-to-r from-emerald-500 to-teal-500"></div>
+                        </div>
+                      </div>
+                      <div className="mt-4 opacity-0 group-hover/card:opacity-100 transition-all duration-300 transform translate-y-2 group-hover/card:translate-y-0">
+                        <span className="text-xs text-emerald-400 font-medium">→ Explore Feature</span>
+                      </div>
                     </div>
                   </div>
-                  <div className="mt-2 bg-blue-500/10 h-1 rounded-full overflow-hidden">
-                    <div className="bg-blue-500 h-full w-1/2 rounded-full animate-pulse group-hover:animate-ping"></div>
-                  </div>
-                  <div className="mt-1 text-xs text-blue-600/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Click to explore →</div>
                 </div>
               </div>
             </div>
 
-            {/* Infinite Scrolling Legal Scenarios */}
-            <div className="absolute top-0 -left-12 h-full w-2 overflow-hidden">
-              <div className="animate-scroll-infinite">
-                <div className="flex flex-col space-y-8 h-full">
-                  {[
-                    { icon: '📋', label: 'Contract Review' },
-                    { icon: '🏛️', label: 'Litigation Support' },
-                    { icon: '💼', label: 'Compliance Check' },
-                    { icon: '📜', label: 'Legal Research' },
-                    { icon: '⚡', label: 'Quick Analysis' },
-                    { icon: '🔒', label: 'Confidential Docs' },
-                    { icon: '📈', label: 'Risk Assessment' },
-                    { icon: '✅', label: 'Quality Assurance' }
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center space-x-2 bg-white/90 rounded-lg p-2 shadow-md border border-accent/10 hover:bg-accent/10 transition-colors duration-300">
-                      <span className="text-sm">{item.icon}</span>
-                      <span className="text-xs font-medium text-foreground whitespace-nowrap">{item.label}</span>
+            <div className="absolute -right-10 bottom-1/3 z-30">
+              <div className="animate-float-premium-fast">
+                <div className="premium-glass-card group/card cursor-pointer">
+                  <div className="relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-orange-600/20 to-red-500/20 opacity-0 group-hover/card:opacity-100 transition-all duration-500"></div>
+                    <div className="relative z-10 p-6">
+                      <div className="flex items-center space-x-4 mb-4">
+                        <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center shadow-lg transform group-hover/card:scale-110 transition-transform duration-300">
+                          <span className="text-xl animate-pulse-glow">📊</span>
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-white/90 group-hover/card:text-orange-400 transition-colors duration-300">Analytics Suite</h4>
+                          <p className="text-xs text-white/60">Comprehensive reporting</p>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex justify-between text-xs">
+                          <span className="text-white/70">Generating</span>
+                          <span className="text-orange-400 font-medium">78%</span>
+                        </div>
+                        <div className="premium-progress-bar">
+                          <div className="premium-progress-fill w-3/4 bg-gradient-to-r from-orange-500 to-red-500"></div>
+                        </div>
+                      </div>
+                      <div className="mt-4 opacity-0 group-hover/card:opacity-100 transition-all duration-300 transform translate-y-2 group-hover/card:translate-y-0">
+                        <span className="text-xs text-orange-400 font-medium">→ Explore Feature</span>
+                      </div>
                     </div>
-                  ))}
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Premium background elements with enhanced animations */}
-            <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-gold/20 transform translate-x-6 translate-y-6 -z-10 rounded-xl animate-pulse-slow"></div>
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-gold/30 rounded-full blur-2xl animate-bounce-slow"></div>
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-accent/30 rounded-full blur-2xl animate-bounce-slow"></div>
-            
-            {/* Interactive Particles */}
-            <div className="absolute inset-0 -z-5">
-              {[...Array(6)].map((_, i) => (
+            {/* Premium Background Effects */}
+            <div className="absolute inset-0 -z-10">
+              {/* Animated Gradient Orbs */}
+              <div className="absolute top-8 right-8 w-32 h-32 bg-gradient-to-r from-blue-500/30 to-purple-600/30 rounded-full blur-3xl animate-float-orb"></div>
+              <div className="absolute bottom-8 left-8 w-40 h-40 bg-gradient-to-r from-cyan-500/20 to-teal-600/20 rounded-full blur-3xl animate-float-orb-delayed"></div>
+              <div className="absolute top-1/2 left-1/2 w-24 h-24 bg-gradient-to-r from-pink-500/25 to-orange-500/25 rounded-full blur-2xl animate-float-orb-reverse"></div>
+              
+              {/* Animated Grid */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="grid-background animate-grid-flow"></div>
+              </div>
+              
+              {/* Floating Particles */}
+              {[...Array(12)].map((_, i) => (
                 <div
                   key={i}
-                  className={`absolute w-2 h-2 bg-accent/40 rounded-full animate-float-particle-${i + 1}`}
+                  className={`absolute w-1 h-1 bg-white/40 rounded-full animate-particle-${i % 6 + 1}`}
                   style={{
-                    left: `${20 + (i * 15)}%`,
-                    top: `${15 + (i * 12)}%`,
-                    animationDelay: `${i * 0.5}s`
+                    left: `${10 + (i * 8)}%`,
+                    top: `${10 + (i * 7)}%`,
+                    animationDelay: `${i * 0.3}s`
                   }}
                 ></div>
               ))}
             </div>
+            
+            {/* Premium 3D Background Layers */}
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-900/40 via-blue-900/20 to-purple-900/40 transform translate-x-8 translate-y-8 -z-20 rounded-2xl backdrop-blur-sm animate-float-bg"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/30 via-transparent to-pink-900/30 transform translate-x-4 translate-y-4 -z-15 rounded-2xl backdrop-blur-sm animate-float-bg-delayed"></div>
           </div>
         </div>
       </div>
