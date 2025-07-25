@@ -77,76 +77,80 @@ const Hero = () => {
             {/* Floating Legal Use Cases - Infinite Animation */}
             <div className="absolute -left-8 top-1/4 z-20">
               <div className="animate-float-slow">
-                <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg p-4 max-w-xs border border-accent/20 hover:scale-105 transition-transform duration-300 cursor-pointer">
+                <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg p-4 max-w-xs border border-accent/20 hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer group">
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center">
-                      <span className="text-lg">📄</span>
+                    <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center group-hover:bg-accent/30 transition-colors duration-300">
+                      <span className="text-lg animate-pulse">📄</span>
                     </div>
                     <div>
-                      <div className="font-semibold text-sm text-foreground">Contract Analysis</div>
+                      <div className="font-semibold text-sm text-foreground group-hover:text-accent transition-colors duration-300">Contract Analysis</div>
                       <div className="text-xs text-muted-foreground">AI reviewing clauses...</div>
                     </div>
                   </div>
                   <div className="mt-2 bg-accent/10 h-1 rounded-full overflow-hidden">
-                    <div className="bg-accent h-full w-3/4 rounded-full animate-pulse"></div>
+                    <div className="bg-accent h-full w-3/4 rounded-full animate-pulse group-hover:animate-ping"></div>
                   </div>
+                  <div className="mt-1 text-xs text-accent/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Click to explore →</div>
                 </div>
               </div>
             </div>
 
             <div className="absolute -right-8 top-1/3 z-20">
               <div className="animate-float-delayed">
-                <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg p-4 max-w-xs border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-pointer">
+                <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg p-4 max-w-xs border border-primary/20 hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer group">
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
-                      <span className="text-lg">⚖️</span>
+                    <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center group-hover:bg-primary/30 transition-colors duration-300">
+                      <span className="text-lg animate-bounce">⚖️</span>
                     </div>
                     <div>
-                      <div className="font-semibold text-sm text-foreground">Case Research</div>
+                      <div className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors duration-300">Case Research</div>
                       <div className="text-xs text-muted-foreground">Finding precedents...</div>
                     </div>
                   </div>
                   <div className="mt-2 bg-primary/10 h-1 rounded-full overflow-hidden">
-                    <div className="bg-primary h-full w-2/3 rounded-full animate-pulse"></div>
+                    <div className="bg-primary h-full w-2/3 rounded-full animate-pulse group-hover:animate-ping"></div>
                   </div>
+                  <div className="mt-1 text-xs text-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Click to explore →</div>
                 </div>
               </div>
             </div>
 
             <div className="absolute -left-4 bottom-1/4 z-20">
               <div className="animate-float-reverse">
-                <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg p-4 max-w-xs border border-green-500/20 hover:scale-105 transition-transform duration-300 cursor-pointer">
+                <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg p-4 max-w-xs border border-green-500/20 hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer group">
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center">
-                      <span className="text-lg">🔍</span>
+                    <div className="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center group-hover:bg-green-500/30 transition-colors duration-300">
+                      <span className="text-lg animate-spin">🔍</span>
                     </div>
                     <div>
-                      <div className="font-semibold text-sm text-foreground">Due Diligence</div>
+                      <div className="font-semibold text-sm text-foreground group-hover:text-green-600 transition-colors duration-300">Due Diligence</div>
                       <div className="text-xs text-muted-foreground">Scanning documents...</div>
                     </div>
                   </div>
                   <div className="mt-2 bg-green-500/10 h-1 rounded-full overflow-hidden">
-                    <div className="bg-green-500 h-full w-4/5 rounded-full animate-pulse"></div>
+                    <div className="bg-green-500 h-full w-4/5 rounded-full animate-pulse group-hover:animate-ping"></div>
                   </div>
+                  <div className="mt-1 text-xs text-green-600/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Click to explore →</div>
                 </div>
               </div>
             </div>
 
             <div className="absolute -right-4 bottom-1/3 z-20">
               <div className="animate-float-fast">
-                <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg p-4 max-w-xs border border-blue-500/20 hover:scale-105 transition-transform duration-300 cursor-pointer">
+                <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg p-4 max-w-xs border border-blue-500/20 hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer group">
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                    <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center group-hover:bg-blue-500/30 transition-colors duration-300">
                       <span className="text-lg">📊</span>
                     </div>
                     <div>
-                      <div className="font-semibold text-sm text-foreground">Report Generation</div>
+                      <div className="font-semibold text-sm text-foreground group-hover:text-blue-600 transition-colors duration-300">Report Generation</div>
                       <div className="text-xs text-muted-foreground">Compiling insights...</div>
                     </div>
                   </div>
                   <div className="mt-2 bg-blue-500/10 h-1 rounded-full overflow-hidden">
-                    <div className="bg-blue-500 h-full w-1/2 rounded-full animate-pulse"></div>
+                    <div className="bg-blue-500 h-full w-1/2 rounded-full animate-pulse group-hover:animate-ping"></div>
                   </div>
+                  <div className="mt-1 text-xs text-blue-600/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Click to explore →</div>
                 </div>
               </div>
             </div>
