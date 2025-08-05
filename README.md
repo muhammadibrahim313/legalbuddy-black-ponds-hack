@@ -1,73 +1,130 @@
-# Welcome to your Lovable project
+# LegalBuddy
 
-## Project info
+**AI-Powered Legal Document Analysis Platform**
 
-**URL**: https://lovable.dev/projects/be3d105b-4745-4c25-9e55-d52c7f015575
+LegalBuddy accelerates and enhances the way legal professionals review and analyze documents. By combining robust AI services with an intuitive interface, LegalBuddy delivers accurate summaries, liability assessments, and an intelligent Q\&A system—securely and at scale.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🚀 Key Features
 
-**Use Lovable**
+* **Document Management**: Create projects and upload documents in multiple formats (PDF, DOCX, images).
+* **AI-Powered Summaries**: Instant, concise overviews generated via OpenAI/Groq.
+* **Liability Analysis**: Percentage-based risk assessments powered by vector search over case law.
+* **Interactive Q\&A**: Ask questions in natural language and receive context-aware answers.
+* **Professional Reports**: Export comprehensive PDF reports with branding and formatting.
+* **Secure Access**: JWT authentication, role-based permissions, and encrypted data storage.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/be3d105b-4745-4c25-9e55-d52c7f015575) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 💡 Architecture Overview
 
-**Use your preferred IDE**
+### Backend (Django REST Framework)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+* **Framework**: Django + Django REST Framework
+* **Document Parsing**: LlamaParse for structured extraction
+* **Data Store**: MongoDB with vector and text indices
+* **AI Integration**: OpenAI, Groq, and Hugging Face embeddings
+* **Auth**: JWT-based user sessions
+* **Deployment**: Optimized for Railway (primary) and Vercel (serverless)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+#### Backend Setup
 
-Follow these steps:
+1. Install packages:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+```bash
+pip install -r requirements.txt
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. Configure environment:
 
-# Step 3: Install the necessary dependencies.
-npm i
+```bash
+cp .env.example .env
+# Populate OPENAI_KEY, MONGO_URI, SECRET_KEY, etc.
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Apply migrations and start:
+
+```bash
+python manage.py migrate
+python manage.py runserver
+```
+
+### Frontend (React + TypeScript)
+
+* **UI Library**: Material UI
+* **State Management**: React Context + Axios
+* **Routing**: React Router
+* **Auth Flow**: JWT tokens stored in HTTP-only cookies
+* **Deployment**: Vercel for instant global CDN
+
+#### Frontend Setup
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Configure environment:
+
+```bash
+cp .env.example .env
+# Set REACT_APP_API_URL, etc.
+```
+
+3. Run dev server:
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🌐 Deployment
 
-**Use GitHub Codespaces**
+1. **Backend**: Connect the Django API to Railway, setting environment variables and build commands in `railway.json`.
+2. **Frontend**: Link your GitHub repo to Vercel, configure the build (`npm run build`) and output directory (`dist/`).
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 📂 Project Structure
 
-This project is built with:
+```text
+(backend/)
+├─ api/          # Views, serializers, utilities
+├─ settings/     # Environment configs
+├─ urls.py       # Endpoint routing
+└─ ...
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+(frontend/)
+├─ src/
+│  ├─ components/ # Reusable UI
+│  ├─ pages/      # Routes
+│  ├─ api/        # HTTP handlers
+│  └─ context/    # Auth/state
+└─ public/       # Static assets
+```
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/be3d105b-4745-4c25-9e55-d52c7f015575) and click on Share -> Publish.
+## 🛠️ Tech Stack
 
-## Can I connect a custom domain to my Lovable project?
+* **Backend**: Django, Django REST Framework
+* **Frontend**: React, TypeScript, Material UI
+* **Database**: MongoDB (vector & text search)
+* **AI/ML**: OpenAI, Groq, Hugging Face
+* **Parsing**: LlamaParse
+* **Auth**: JWT
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🤝 Contributing & Support
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+* **API Docs**: See `/docs` for OpenAPI schema.
+* **Issue Tracker**: Create issues on GitHub for bug reports or feature requests.
+* **Community**: Join our Slack channel to collaborate and ask questions.
+
+---
+
+*LegalBuddy—Transforming legal workflows with intelligence and speed.*
